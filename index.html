@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-background">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yashaland — Design & Digital Studio</title>
+  <meta name="description" content="Yashaland is a digital studio crafting brand identities, websites, and product experiences that help businesses grow." />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="#home" class="logo">YASHALAND</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">Menu</button>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div>
+          <h1 class="text-balance">We design brands and products people remember.</h1>
+          <p class="text-pretty">Yashaland is a digital studio helping ambitious businesses launch standout brands, websites, and product experiences that drive real growth.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn">Start a project</a>
+            <a href="#work" class="btn btn-outline">View our work</a>
+          </div>
+        </div>
+        <img class="hero-image" src="hero.png" alt="Abstract 3D render representing the studio's design aesthetic" />
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2>What we do</h2>
+        <p class="text-pretty">From first concept to final launch, we partner with you across the full product journey.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>Brand Identity</h3>
+            <p>Logos, visual systems, and guidelines that make your business instantly recognizable.</p>
+          </article>
+          <article class="card">
+            <h3>Web Design &amp; Development</h3>
+            <p>Fast, responsive marketing sites and web apps built on modern, reliable technology.</p>
+          </article>
+          <article class="card">
+            <h3>Product &amp; UX</h3>
+            <p>Research-driven interfaces and prototypes that turn complex ideas into intuitive products.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work / Gallery -->
+    <section class="section alt" id="work">
+      <div class="container">
+        <h2>Selected work</h2>
+        <p class="text-pretty">A look at recent projects across SaaS, mobile, and brand.</p>
+        <div class="grid">
+          <figure class="grid-item">
+            <img src="work-1.png" alt="Dashboard interface designed for a SaaS client" />
+            <figcaption>Analytics dashboard — SaaS platform</figcaption>
+          </figure>
+          <figure class="grid-item">
+            <img src="work-2.png" alt="Mobile app interface mockup" />
+            <figcaption>Mobile app — fintech product</figcaption>
+          </figure>
+          <figure class="grid-item">
+            <img src="work-3.png" alt="Brand identity design samples" />
+            <figcaption>Brand identity — lifestyle startup</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2>About the studio</h2>
+        <p class="text-pretty">We're a small, senior team that cares deeply about craft. We work closely with founders and marketing leaders to ship work that looks great and performs even better. Here are a few things we specialize in:</p>
+        <ul class="pill-list">
+          <li>Brand strategy</li>
+          <li>UI/UX design</li>
+          <li>Webflow &amp; Next.js</li>
+          <li>Design systems</li>
+          <li>Motion &amp; interaction</li>
+          <li>Conversion optimization</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section alt" id="contact">
+      <div class="container">
+        <h2>Start a project</h2>
+        <p class="text-pretty">Tell us a bit about what you're building and we'll get back to you within two business days.</p>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+          <div class="form-row">
+            <label for="message">Project details</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> Yashaland Studio. All rights reserved.</p>
+      <div class="socials">
+        <a href="#">Twitter</a>
+        <a href="#">Dribbble</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

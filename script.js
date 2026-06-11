@@ -2,7 +2,7 @@
 const navToggle = document.getElementById('navToggle');
 const navList = document.querySelector('.nav-list');
 navToggle?.addEventListener('click', () => {
-  navList.classList.toggle('is-open');
+  navList?.classList.toggle('is-open');
 });
 
 // Smooth scroll for internal links
@@ -16,22 +16,24 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         top: target.offsetTop - 60,
         behavior: 'smooth'
       });
-      navList.classList.remove('is-open');
+      navList?.classList.remove('is-open');
     }
   });
 });
 
 // Footer year
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // Contact form using mailto (no backend)
 const form = document.getElementById('contactForm');
 const statusEl = document.getElementById('formStatus');
+const CONTACT_EMAIL = 'ayehsadeghi9@gmail.com';
 
 form?.addEventListener('submit', e => {
   e.preventDefault();
-  const name = document.getElementById('ayeh').value.trim();
-  const email = document.getElementById('ayehsadeghi9@gmail.com').value.trim();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
   const message = document.getElementById('message').value.trim();
 
   if (!name || !email || !message) {
@@ -41,7 +43,7 @@ form?.addEventListener('submit', e => {
 
   const subject = encodeURIComponent(`Message from ${name}`);
   const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-  const mailtoUrl = `mailto:youremail@example.com?subject=${subject}&body=${body}`;
+  const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
 
   statusEl.textContent = 'Opening your email client...';
   window.location.href = mailtoUrl;
