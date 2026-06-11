@@ -37,14 +37,14 @@ form?.addEventListener('submit', e => {
   const message = document.getElementById('message').value.trim();
 
   if (!name || !email || !message) {
-    statusEl.textContent = 'Please complete all fields.';
+    statusEl.textContent = 'لطفاً همه فیلدها را تکمیل کنید.';
     return;
   }
 
-  const subject = encodeURIComponent(`Message from ${name}`);
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+  const subject = encodeURIComponent(`پیام جدید از ${name}`);
+  const body = encodeURIComponent(`نام: ${name}\nایمیل: ${email}\n\n${message}`);
   const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
 
-  statusEl.textContent = 'Opening your email client...';
+  statusEl.textContent = 'در حال باز کردن برنامه ایمیل شما...';
   window.location.href = mailtoUrl;
 });
